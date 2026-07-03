@@ -1,0 +1,996 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@700&display=swap');
+
+
+
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0f0f0f;
+    color: #e5e5e5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CONTAINER */
+.container {
+    width: 1400px;
+    max-width: 92%;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(15, 15, 15, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+/* .container-logo>a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.container-logo>a strong {
+    color: #ffffff;
+} */
+
+.container-logo>a img {
+    width: 300px;
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    gap: 36px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e10600;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* SEÇÕES */
+section {
+    padding: 90px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* HERO */
+section:first-of-type {
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    /* um abaixo do outro */
+    align-items: center;
+    /* centraliza horizontalmente */
+    text-align: center;
+    /* centraliza o texto */
+    gap: 24px;
+    /* espaço entre elementos */
+    padding: 100px 0 80px;
+}
+
+h1 {
+    font-size: 3.4rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 16px 0 8px;
+    color: #ffffff;
+}
+
+p {
+    max-width: 800px;
+    margin-bottom: 30px;
+    color: #cfcfcf;
+}
+
+/* ARTICLES / SERVIÇOS */
+#servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+#servicos>h2 {
+    grid-column: 1 / -1;
+}
+
+#servicos article {
+    background-color: #151515;
+    padding: 30px;
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicos article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+#servicos a {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #e10600;
+}
+
+/* LISTA DE DIFERENCIAIS */
+section ul li {
+    margin-bottom: 30px;
+}
+
+section ul h3 {
+    color: #e10600;
+}
+
+/* DL */
+section dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    gap: 30px 60px;
+}
+
+
+dl dt {
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 16px;
+}
+
+dl dd {
+    margin-left: 0;
+    margin-bottom: 12px;
+    color: #cfcfcf;
+}
+
+/* FAQ */
+details {
+    background-color: #151515;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* FORM */
+form {
+    margin-top: 40px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+input[type="email"] {
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: none;
+    min-width: 260px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+button {
+    padding: 14px 26px;
+    border-radius: 8px;
+    border: none;
+    background-color: #e10600;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #b80500;
+}
+
+/* FOOTER */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #0a0a0a;
+    color: #8c8c8c;
+}
+
+footer nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+
+
+
+
+.section-side {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.section-side .content {
+    flex: 1;
+}
+
+.section-side figure {
+    flex: 1;
+}
+
+
+/* =========================
+   LOCALIZAÇÃO
+========================= */
+
+.location {
+    padding: 100px 0;
+}
+
+.location-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    /* AFASTA mapa do texto */
+}
+
+/* TEXTO */
+.location-info {
+    flex: 1;
+}
+
+.location-info h2 {
+    margin-bottom: 12px;
+}
+
+.location-info p {
+    max-width: 520px;
+    margin: 0 auto 32px;
+    /* centraliza o parágrafo */
+    text-align: center;
+    color: #cfcfcf;
+}
+
+.location-info ul {
+    margin-top: 20px;
+}
+
+.location-info li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.location-info strong {
+    color: #ffffff;
+}
+
+.location-info a {
+    color: #20d30d;
+}
+
+
+/* MAPA */
+.location-map {
+    flex: 1;
+    padding-right: 32px;
+    /* evita ficar colado na borda */
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 380px;
+    border: none;
+    border-radius: 24px;
+    /* bordas arredondadas */
+    /* filter: grayscale(100%) contrast(1.1); */
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .location-map iframe {
+        height: 300px;
+    }
+}
+
+
+/* BOTÃO CTA NO MENU */
+.nav-cta a {
+    background-color: #e10600;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-cta a:hover {
+    background-color: #b80500;
+    transform: translateY(-2px);
+}
+
+/* Remove sublinhado animado do botão */
+.nav-cta a::after {
+    display: none;
+}
+
+
+/* BOTÃO GOOGLE MAPS */
+.maps-button {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 14px 22px;
+    background-color: #e10600;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.maps-button:hover {
+    background-color: #b80500;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVO FINAL
+   ========================= */
+
+/* TABLET E MOBILE */
+@media (max-width: 900px) {
+
+    /* HEADER / NAV */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .nav-cta a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        padding: 0 12px;
+    }
+
+    /* SECTION SIDE */
+    .section-side {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-side p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* SERVIÇOS */
+    #servicos {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    /* VALORES (DL) */
+    section dl {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    /* LOCALIZAÇÃO (CORRIGIDO) */
+    .location-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .location-info p {
+        text-align: center;
+    }
+
+    .location-map {
+        padding-right: 0;
+    }
+
+    .location-map iframe {
+        height: 300px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    /* FORM */
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="email"],
+    button {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* =========================
+   CTA PADRÃO SERVIÇOS
+========================= */
+
+.cta-servicos {
+    padding: 80px 0;
+}
+
+.cta-card {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    background-color: #151515;
+    /* MESMO FUNDO DOS SERVIÇOS */
+    padding: 50px 40px;
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-card:hover {
+    transform: translateY(-6px);
+    /* MESMO EFEITO */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cta-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.cta-card p {
+    max-width: 720px;
+    margin: 0 auto 32px;
+    color: #cfcfcf;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 28px;
+    background-color: #e10600;
+    color: #ffffff;
+
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 10px;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #b80500;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .cta-card {
+        padding: 40px 20px;
+    }
+
+    .cta-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* =========================
+   AVALIAÇÕES GOOGLE
+========================= */
+
+.google-reviews {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.reviews-summary {
+    margin-bottom: 40px;
+    font-size: 1rem;
+    color: #cfcfcf;
+}
+
+.reviews-summary strong {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin: 0 6px;
+}
+
+.stars {
+    color: #e10600;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background-color: #151515;
+    /* MESMO DOS SERVIÇOS */
+    padding: 32px;
+    border-radius: 18px;
+    text-align: left;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    /* MESMO EFEITO */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.review-card p {
+    margin: 18px 0 16px;
+    color: #cfcfcf;
+}
+
+.review-card strong {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.reviews-note {
+    margin: 8px auto 32px;
+    /* centraliza horizontalmente */
+    font-size: 0.85rem;
+    color: #9a9a9a;
+    letter-spacing: 0.4px;
+    text-align: center;
+    max-width: none;
+    /* remove a limitação */
+}
+
+/* =====================================================
+   AJUSTES FINAIS PARA MOBILE (CELULAR)
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Espaçamento geral das seções */
+    section {
+        padding: 50px 0;
+    }
+
+    /* Serviços */
+    #servicos article {
+        padding: 22px;
+    }
+
+    #servicos h3 {
+        font-size: 1.05rem;
+    }
+
+    #servicos p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* Avaliações Google */
+    .review-card {
+        padding: 22px;
+        text-align: center;
+    }
+
+    .review-card p {
+        font-size: 0.95rem;
+    }
+
+    /* Mapa */
+    .location-map iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+
+}
+
+/* =========================
+   MENU HAMBÚRGUER
+========================= */
+
+/* Botão hambúrguer */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Mobile e telas pequenas */
+@media (max-width: 900px) {
+
+    /* mostra o botão */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* esconde o menu */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #0f0f0f;
+        padding: 20px 0;
+        border-bottom: 1px solid #1f1f1f;
+    }
+
+    /* menu aberto */
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+/* ===== Logo + unidade ===== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ⭐ ESSA LINHA CENTRALIZA */
+  line-height: 1.1;
+}
+
+
+.logo-info strong {
+  font-size: 18px;
+}
+
+.unidade {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.simulador {
+    padding: 80px 20px;
+    background: #0e0e0e;
+    color: #fff;
+    text-align: center;
+}
+
+.simulador h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.simulador-sub {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.simulador-wrapper {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.simulador-imagem img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.7);
+    transition: .35s ease;
+}
+
+.simulador-controles {
+    text-align: left;
+}
+
+.simulador-controles h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.botoes-insulfilm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.botoes-insulfilm button {
+    background: #181818;
+    border: 1px solid #333;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botoes-insulfilm button:hover {
+    background: #e30613;
+    border-color: #e30613;
+}
+
+.botoes-insulfilm button.ativo {
+    background: #e30613;
+    border-color: #e30613;
+}
+
+.simulador-cta {
+    display: inline-block;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #e30613, #b6000c);
+    padding: 14px 26px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.simulador-cta:hover {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .simulador-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .simulador-controles {
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .container-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+}
+
+/* =========================
+   CORREÇÃO ROLAGEM HORIZONTAL MOBILE
+========================= */
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    body {
+        position: relative;
+    }
+
+    img,
+    iframe,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,.3);
+    z-index: 9999;
+    transition: transform .2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    font-size: 34px;
+}
+
+
+/* Correção do botão hambúrguer para remover o fundo vermelho indesejado */
+.menu-toggle {
+    background: transparent !important;
+    padding: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.menu-toggle:focus,
+.menu-toggle:active {
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
