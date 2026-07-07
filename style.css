@@ -1023,5 +1023,6 @@ body {
         display: block !important;
         margin-left: auto; /* Empurra o botão totalmente para a direita */
         flex-shrink: 0;
+        padding: 5px 0 5px 10px !important;
     }
 }
