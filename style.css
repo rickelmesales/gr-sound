@@ -994,3 +994,33 @@ body {
     background: transparent !important;
     box-shadow: none !important;
 }
+
+/* Ajustes específicos para o Header no Mobile */
+@media (max-width: 900px) {
+    
+    .container-logo {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    /* Impede que o link da logo seja esmagado e suma */
+    .container-logo > a.logo {
+        display: flex;
+        flex-shrink: 0; /* Garante que a logo não vai encolher até sumir */
+    }
+
+    /* Reduz o tamanho da logo para caber perfeitamente em telas de celular */
+    .container-logo > a img {
+        width: 180px !important; /* Tamanho ideal para mobile */
+        height: auto;
+    }
+
+    /* Alinha o menu hambúrguer perfeitamente na direita */
+    .menu-toggle {
+        display: block !important;
+        margin-left: auto; /* Empurra o botão totalmente para a direita */
+        flex-shrink: 0;
+    }
+}
