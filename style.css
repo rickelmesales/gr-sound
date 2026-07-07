@@ -996,38 +996,39 @@ body {
 }
 
 /* Ajustes específicos para o Header no Mobile */
-    @media (max-width: 900px) {
-        
-        .container-logo {
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            width: 100% !important;
-            max-width: 92% !important; /* ⭐ Força a barra a respeitar o container do site */
-            margin: 0 auto !important;  /* Centraliza o bloco perfeitamente */
-            padding: 10px 0 !important; /* ⭐ Remove o padding lateral fixo que jogava o botão para fora */
-        }
-
-        /* Impede que o link da logo seja esmagado e suma */
-        .container-logo > a.logo {
-            display: flex;
-            flex-shrink: 0; 
-        }
-
-        /* Reduz o tamanho da logo para caber perfeitamente em telas de celular */
-        .container-logo > a img {
-            width: 180px !important; 
-            height: auto;
-        }
-
-        /* Alinha o menu hambúrguer perfeitamente na direita */
-        .menu-toggle {
-            display: block !important;
-            margin-left: auto; 
-            flex-shrink: 0;
-            padding: 0 !important; /* ⭐ Garante que nenhuma margem interna empurre ele */
-        }
+@media (max-width: 900px) {
+    
+    .container-logo {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 92% !important; /* Força a largura igual ao resto do site */
+        margin: 0 auto !important;
+        padding: 10px 0 !important;
     }
+
+    /* Impede que o link da logo seja esmagado e suma */
+    .container-logo > a.logo {
+        display: flex !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Reduz o tamanho da logo para caber perfeitamente em telas de celular */
+    .container-logo > a img {
+        width: 180px !important;
+        height: auto !important;
+    }
+
+    /* Alinha o menu hambúrguer perfeitamente na direita com margem segura */
+    .menu-toggle {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: 4% !important; /* ⭐ CRUCIAL: Cria o recuo exato para não colar na tela */
+        flex-shrink: 0 !important;
+        padding: 0 !important;
+    }
+}
 
 /* =====================================================
    CORREÇÃO DEFINITIVA DO HEADER FIXO (GR SOUND)
