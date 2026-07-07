@@ -1028,23 +1028,25 @@ body {
 }
 
 /* =====================================================
-   CORREÇÃO DO HEADER FIXO NO TOPO
+   CORREÇÃO DEFINITIVA DO HEADER FIXO NO TOPO (GR SOUND)
 ===================================================== */
 header {
     position: fixed !important; /* Força o menu a ficar preso no topo */
-    left: 0;
-    width: 100%;
-    z-index: 9999; /* Garante que fique acima de mapas, imagens e do botão do Whats */
+    top: 0 !important;          /* Fixa o ponto de partida no topo absoluto */
+    left: 0 !important;         /* Alinha perfeitamente à esquerda */
+    width: 100% !important;     /* Ocupa toda a largura da tela */
+    z-index: 9999 !important;   /* Garante que fique acima de tudo */
 }
 
 body {
-    padding-top: 105px !important; /* Empurra o conteúdo para baixo para o menu não tampar o texto */
+    padding-top: 105px !important; /* Empurra o conteúdo para o menu não tampar o banner inicial */
 }
 
 /* Ajusta o espaçamento do topo no mobile, já que o menu fica menor */
 @media (max-width: 900px) {
-    header{
+    header {
         position: fixed !important;
+        top: 0 !important;      
     }
     body {
         padding-top: 75px !important; 
