@@ -471,7 +471,7 @@
         </nav>
     </footer>
 
-    <script>
+    <!-- <script>
         const toggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('.nav-menu');
 
@@ -485,6 +485,54 @@
     </script>
 
     <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const botoes = document.querySelectorAll('.botoes-insulfilm button');
+    const imagem = document.getElementById('imagemSimulador');
+
+    botoes.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            botoes.forEach(b => b.classList.remove('ativo'));
+            btn.classList.add('ativo');
+
+            const novaImagem = btn.dataset.img;
+
+            imagem.style.opacity = 0;
+
+            setTimeout(() => {
+                imagem.src = novaImagem;
+                imagem.style.opacity = 1;
+            }, 180);
+        });
+    });
+
+});
+</script> -->
+
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    const links = document.querySelectorAll('.nav-menu a'); // 1. Adicionamos essa linha
+
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        toggle.setAttribute(
+            'aria-label',
+            nav.classList.contains('active') ? 'Fechar menu' : 'Abrir menu'
+        );
+    });
+
+    // 2. Adicionamos esse bloco para fechar ao clicar nos links
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            toggle.setAttribute('aria-label', 'Abrir menu');
+        });
+    });
+</script>
+
+<script>
 document.addEventListener('DOMContentLoaded', () => {
 
     const botoes = document.querySelectorAll('.botoes-insulfilm button');
